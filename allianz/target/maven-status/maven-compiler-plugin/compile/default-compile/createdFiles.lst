@@ -1,0 +1,7 @@
+com\nevitech\allianz\AllianzApplication.class
+com\nevitech\allianz\model\CampaignStatusChange.class
+com\nevitech\allianz\api\allianzcontroller.class
+com\nevitech\allianz\dao\campaigndao.class
+com\nevitech\allianz\dao\dataAccessService.class
+com\nevitech\allianz\service\allianzservice.class
+com\nevitech\allianz\model\campaign.class
