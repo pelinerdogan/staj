@@ -1,0 +1,30 @@
+<section class="campaignss">
+    <h2 class="campaignss-name"> {{ campaign.name }}</h2>
+    
+    <div class="campaign-container">
+        <p class="campaignss-detail">Kampanya Açıklaması: {{ campaign.detail }}</p>
+    </div>
+       
+        <p class="campaignss-category">Kategori: {{ campaign.category }}</p>
+        
+        <p class="campaignss-state active" *ngIf="campaign.status.toLocaleLowerCase() === 'active'">Durumu: Aktif</p>
+        <p class="campaignss-state waiting" *ngIf="campaign.status.toLocaleLowerCase() === 'waiting'">Durumu: Onay Bekliyor</p>
+        <p class="campaignss-state deactive" *ngIf="campaign.status.toLocaleLowerCase() === 'deactive'">Durumu: Aktif Değil</p>
+        
+        <p class="campaignss-states mukerrer" *ngIf="campaign.mukerrer === true">Bu kampanya mükerrer.</p>
+      
+    <button *ngIf="campaign.status.toLocaleLowerCase()  === 'active'  && campaign.mukerrer===false" (click)="deactivateCampaign()">Deaktive et</button>
+    <button *ngIf="campaign.status.toLocaleLowerCase()  === 'waiting' && campaign.mukerrer===false" (click)="deactivateCampaign()">Deaktive et</button>
+    <button *ngIf="campaign.status.toLocaleLowerCase()  === 'deactive'&& campaign.mukerrer===false" (click)="activateCampaign()">Aktive et</button>
+    <button *ngIf="campaign.status.toLocaleLowerCase()  === 'waiting' && campaign.mukerrer===false" (click)="activateCampaign()">Aktive et</button>
+    <button (click)="toggleStateChangeButtons()">
+        {{ showStateChanges ? 'Gizle' : 'Durum Değişikliklerini Göster' }}
+    </button>
+    <p class="campaignss-category" *ngIf="showStateChanges">
+        <span *ngFor="let state of statechanes">
+           Durum:  {{ state.status }} Değişim Zamanı : {{ state.changeTimestamp }}
+           <pre></pre>
+        </span>
+    </p>
+    
+  </section>

@@ -1,0 +1,27 @@
+.opening{
+    
+    flex: 1; /* Distribute available space equally among both components */ /* Add some margin for spacing */
+   
+}
+h1 {
+    font-size: 50px;
+    text-align: center; /* Center-align the heading */
+    margin: 10px 0; /* Adjust the margin to control vertical spacing */
+    color: #004a93;
+}
+
+.slogan {
+    font-size: 15px;
+    margin-left: 47%;
+    margin-top: 5px 0; /* Adjust the margin to control vertical spacing */
+    color: #004a93;
+
+}
+.styled-image {
+    width: 40%;
+    border: 2px solid #ccc;
+    margin-left: 30%;
+    
+    border-radius: 16px;
+    /* Add more styles as needed */
+}

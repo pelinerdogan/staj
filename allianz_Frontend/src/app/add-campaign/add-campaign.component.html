@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Kampanya ekle</title>
+</head>
+
+<body>
+  <h1>Kampanya ekle</h1>
+  <form (ngSubmit)="submitForm()" #campaignForm="ngForm">
+    <div>
+      <label for="name">İsim:</label>
+      <input type="text" id="name" name="name" [(ngModel)]="camp.name" required>
+      <div *ngIf="camp.name && camp.name.length > 50 || camp.name.length <10"  class="warning-message">
+        İsim en az 10,en fazla 50 karakterden oluşmalıdır.
+      </div>
+    </div>
+    <div>
+      <label for="details">Açıklama:</label>
+      <textarea id="details" name="details" [(ngModel)]="camp.detail" required></textarea>
+      <div *ngIf="camp.detail && camp.detail.length < 50 || camp.detail.length > 200 " class="warning-message">
+        Açıklama en az 50 ,en fazla 200 karakterden oluşmalıdır.
+      </div>
+    </div>
+    <div>
+      <label for="insurance-type">Sigorta Tipi:</label>
+      <select id="insurance-type" name="insurance-type" [(ngModel)]="camp.category" required>
+        <option value="" disabled selected>Bir sigorta tipi seçiniz</option>
+        <option value="Tamamlayıcı Sağlık Sigortası">Tamamlayıcı Sağlık Sigortası</option>
+        <option value="Özel Sağlık Sigortası">Özel Sağlık Sigortası</option>
+        <option value="Hayat Sigortası">Hayat Sigortası</option>
+        <option value="Diğer">Diğer</option>
+      </select>
+    </div>
+    <button type="submit" >Kampanya ekle</button>
+    
+  </form>
+  
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+/* add-campaign.component.css */
+
+
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    color: #004a93;
+    
+  }
+  
+  h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 2.5rem; /* Adjust the font size as needed */
+    text-align: center;
+    color: #004a93;
+    margin-bottom: 20px;
+  }
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  form div {
+    
+    margin-bottom: 10px;
+
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  textarea,
+  select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  textarea {
+    resize: vertical;
+    height: 120px;
+  }
+  
+  select {
+    margin-top: 10px;
+    appearance: none;
+    width: 100%;
+    background-color: #fff;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23343a40' viewBox='0 0 24 24'%3E%3Cpath d='M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z'/%3E%3C/svg%3E"),
+      linear-gradient(to bottom, #ffffff 0%, #ffffff 100%);
+    background-repeat: no-repeat, repeat;
+    background-position: right 8px top 50%, 0 0;
+    background-size: 24px 24px, 100%;
+    padding-right: 32px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button[type="submit"] {
+    display: block;
+    width: 100%;
+    background-color: #004a93;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #004a93;
+  }
+  
+  .warning-message {
+    color: red; 
+    font-size: 14px; 
+    margin-top: 4px; 
+  }
+  

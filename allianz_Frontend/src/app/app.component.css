@@ -1,0 +1,31 @@
+.header-container {
+  display: flex; /* Use flexbox to arrange items side by side */
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Distribute space between items */
+  padding: 10px; /* Add some padding for spacing */
+  background-color: white; /* Optional background color */
+}
+
+.brand-link {
+  text-decoration: none; /* Remove underline for the link */
+}
+
+.brand-name {
+  display: flex; /* Use flexbox for the branding section */
+  align-items: center; /* Center the logo vertically */
+}
+
+.brand-logo {
+  width: 200px; /* Adjust the logo size */
+  height: auto;
+  margin-right: 10px; /* Add some spacing between the logo and text */
+}
+
+/* Add styles for app-searchcomp if needed */
+
+  .app-container {
+    flex: 1; /* Distribute available space equally among both components */
+    margin: 10px; /* Add some margin for spacing */
+    margin-top: 20px;
+  }
+

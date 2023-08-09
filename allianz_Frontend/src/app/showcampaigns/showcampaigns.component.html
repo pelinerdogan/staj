@@ -1,0 +1,15 @@
+<div class="campaigns-statistics">
+  
+
+  <div>
+    <p>Aktif kampanya sayısı: {{ campaignStatistics.active }}</p>
+    <p>Deaktif kampanya sayısı: {{ campaignStatistics.deactive }}</p>
+  </div>
+  
+</div>
+<div class="campaigns-container">
+    
+    <app-campaign-comp [camp]="camp" *ngFor="let camp of filteredCampaigns"></app-campaign-comp>
+
+
+  </div>
