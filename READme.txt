@@ -20,9 +20,9 @@ CREATE TABLE campaign_status_changes (
 CREATE TABLE allianz (
     id VARCHAR(50) PRIMARY KEY,
     Category VARCHAR(255) NOT NULL,
-    details VARCHAR(50) NOT NULL,
-    state VARCHAR(50) NOT NULL,
-    name VARCHAR(50) NOT NULL,
+    details VARCHAR(255) NOT NULL,
+    state VARCHAR(255) NOT NULL,
+    name VARCHAR(255) NOT NULL,
     mukerrer BOOLEAN
 );
 
