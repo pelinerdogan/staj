@@ -1,0 +1,32 @@
+version: '3'
+services:
+  mysqldb:
+    image: pelinerdogan/mysql
+    container_name: mysqldb
+    environment:
+      MYSQL_ROOT_PASSWORD: Pass_2023
+      MYSQL_DATABASE: userdb
+    volumes:
+      - mysqldb-data:/var/lib/mysql
+    networks:
+      - spring-net
+
+  app:
+    image: pelinerdogan/app
+    container_name: app
+    environment:
+      MYSQL_HOST: mysqldb
+      MYSQL_USER: root
+      MYSQL_PASSWORD: Pass_2023
+      MYSQL_PORT: 3306
+    ports:
+      - "9090:8080"
+    networks:
+      - spring-net
+
+networks:
+  spring-net:
+    driver: bridge
+
+volumes:
+  mysqldb-data:
