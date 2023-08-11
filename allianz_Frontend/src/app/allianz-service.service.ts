@@ -9,7 +9,7 @@ import { Statesofcampaign } from './statesofcampaign';
 })
 export class AllianzServiceService {
 
-  private baseUrl = 'http://localhost:8080/api/v1/allianz';
+  private baseUrl = 'http://localhost:9090/api/v1/allianz';
 
   constructor(private http: HttpClient) { }
 
